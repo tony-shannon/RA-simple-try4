@@ -5,6 +5,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "query-string": "6.8.3",
     "ra-data-fakerest": "2.6.0",
     "ra-data-json-server": "2.9.7",
     "ra-data-simple-rest": "2.9.7",

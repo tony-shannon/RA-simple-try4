@@ -66,6 +66,7 @@ export default (apiUrl, httpClient = fetchUtils.fetchJson) => {
           _end: page * perPage
         };
         url = `${apiUrl}/${resource}?${stringify(query)}`;
+        console.log("Target URL is " + url);
         break;
       }
       case GET_ONE:

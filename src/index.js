@@ -9,13 +9,17 @@ import { Admin, Resource, ListGuesser } from "react-admin";
 //import jsonServerProvider from "ra-data-json-server";
 //import simpleRestProvider from 'ra-data-simple-rest';
 //import fakeDataProvider from "ra-data-fakerest";
-import jsonServerProvider from "../json-server-provider2.js";
-
+import jsonServerProvider from "../json-server-providerB.js";
+import simpleRestDataProvider from "../simple-rest-providers2.js";
 import fakeDataProvider from "../fakeDataProvider2.js";
 
 //const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
-const dataProvider = jsonServerProvider("https://8qp7u.sse.codesandbox.io"); // JSONserver set up by TS in codesandbox
+//const dataProvider = jsonServerProvider("https://8qp7u.sse.codesandbox.io"); // JSONserver set up by TS in codesandbox
+//const dataProvider = jsonServerProvider("http://165.22.121.46:3030/RA");
+const dataProvider = jsonServerProvider("https://dev1.frectal.net/RA/");
+//const dataProvider = simpleRestDataProvider("https://8qp7u.sse.codesandbox.io"); // JSONserver set up by TS in codesandbox
 
+// comment line extra
 //const App = () => <Admin dataProvider={dataProvider} />;
 /*
 const dataProvider = fakeDataProvider(
@@ -42,6 +46,7 @@ const dataProvider = fakeDataProvider(
   },
   true
 );
+<Resource name="comments" list={ListGuesser} />
 */
 //export default App;
 
@@ -51,7 +56,6 @@ function App() {
       <Admin dataProvider={dataProvider}>
         <Resource name="users" list={ListGuesser} />
         <Resource name="posts" list={ListGuesser} />
-        <Resource name="comments" list={ListGuesser} />
       </Admin>
 
       <div className="App">
